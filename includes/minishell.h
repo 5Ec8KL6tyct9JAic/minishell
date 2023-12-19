@@ -6,7 +6,7 @@
 /*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 12:12:42 by dvalerio          #+#    #+#             */
-/*   Updated: 2023/12/19 16:35:49 by dvalerio         ###   ########.fr       */
+/*   Updated: 2023/12/19 16:41:28 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,28 @@
 // EXECUTE
 
 // LEXER
+typedef	struct s_lexer
+{
+	struct s_lexer	*next;
+	int				token;
+	char			*word;
+	int				outfile;
+	int				infile;
+	int				nword;
+}	t_lexer;
 
-// PARSE
+// PARSER
+typedef	struct s_parser
+{
+	char			**fullcmd;
+	char			*fullpath;
+	char			**envpath;
+	int				infile;
+	int				outfile;
+	int				redirect;
+	int				pid;
+	struct s_parser	*next;
+}	t_parser;
 
 // UTILS
 void	free_array(char **str);
