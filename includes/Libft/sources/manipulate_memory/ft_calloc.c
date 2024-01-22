@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   junk.h                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 15:40:08 by dvalerio          #+#    #+#             */
-/*   Updated: 2023/12/21 15:47:55 by dvalerio         ###   ########.fr       */
+/*   Created: 2022/10/13 14:42:54 by dvalerio          #+#    #+#             */
+/*   Updated: 2022/10/20 11:16:45 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef JUNK_H
-# define JUNK_H
+#include "../../includes/libft.h"
 
-# include "includes.h"
-
-struct s_malloc
+void	*ft_calloc(size_t count, size_t size)
 {
-	void			*content;
-	struct s_malloc	*next;
-};
+	void	*ptr;
 
-#endif
+	ptr = malloc(size * count);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, size * count);
+	return (ptr);
+}

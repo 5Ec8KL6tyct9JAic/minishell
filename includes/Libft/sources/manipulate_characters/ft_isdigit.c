@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.h                                           :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dvalerio <dvalerio@42lausanne.ch>            +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 15:40:40 by dvalerio          #+#    #+#             */
-/*   Updated: 2023/12/21 15:48:01 by dvalerio         ###   ########.fr       */
+/*   Created: 2022/10/10 12:06:39 by dvalerio          #+#    #+#             */
+/*   Updated: 2022/10/11 11:31:09 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PARSER_H
-# define PARSER_H
+#include "../../includes/libft.h"
 
-# include "includes.h"
-
-#endif
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
+}

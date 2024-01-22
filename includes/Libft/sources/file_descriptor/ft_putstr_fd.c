@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   data.h                                             :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 15:41:40 by dvalerio          #+#    #+#             */
-/*   Updated: 2023/12/21 15:48:35 by dvalerio         ###   ########.fr       */
+/*   Created: 2022/10/13 16:36:17 by dvalerio          #+#    #+#             */
+/*   Updated: 2022/10/18 12:58:53 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA_H
-# define DATA_H
+#include "../../includes/libft.h"
 
-typedef struct s_command	t_command;
-typedef struct s_lexical	t_lexical;
-typedef struct s_data		t_data;
-typedef struct s_malloc		t_malloc;
-typedef struct s_lexical	t_lexical;
+void	ft_putstr_fd(char *s, int fd)
+{
+	int	i;
 
-
-#endif
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
+}

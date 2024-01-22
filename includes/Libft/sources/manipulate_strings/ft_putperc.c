@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   ft_putperc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dvalerio <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/21 15:40:50 by dvalerio          #+#    #+#             */
-/*   Updated: 2023/12/21 15:49:22 by dvalerio         ###   ########.fr       */
+/*   Created: 2023/04/03 15:16:06 by dvalerio          #+#    #+#             */
+/*   Updated: 2023/04/21 08:59:05 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include "../../includes/libft.h"
 
-# include "includes.h"
-
-void	free_array(char **str);
-
-#endif
+int	ft_putperc(char c)
+{
+	c = '%';
+	write(1, &c, 1);
+	return (1);
+}
