@@ -29,7 +29,7 @@ static void	redirect_input(t_statement *node)
 	if (node->next->argv[0])
 	{
 		while (node->next->operator == RDR_INPUT)
-			node = node->next;
+			node = node->next;//2 fois les meme lignes cest voulu ?
 		while (node->next->operator == RDR_INPUT)
 			node = node->next;
 		if (access(node->next->argv[0], F_OK) == 0)

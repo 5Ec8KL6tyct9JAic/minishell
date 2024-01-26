@@ -3,13 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+         #
+#    By: larbre <larbre@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 13:16:56 by dvalerio          #+#    #+#              #
-#    Updated: 2022/10/21 11:38:31 by dvalerio         ###   ########.fr        #
+#    Updated: 2024/01/25 22:21:04 by larbre           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-# Nom du fichier cible
+
 NAME = libft.a
 
 # Compilateur
@@ -81,7 +81,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	@$(AR) $@ $(OBJECTS)
-	@echo "$(GREEN)◞( ､ᐛ)､＿/ Le Makefile de [LIBFT] a été compilé avec succès!$(DEF_COLOR)"
+#@echo "$(GREEN)◞( ､ᐛ)､＿/ Le Makefile de [LIBFT] a été compilé avec succès!$(DEF_COLOR)"
 
 # Règle générique pour la compilation de fichiers source en fichiers objet
 %.o: %.c

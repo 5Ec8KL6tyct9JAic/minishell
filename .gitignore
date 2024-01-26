@@ -1,37 +1,66 @@
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
+pft_4000_test/
+.vscode/
+# Prerequisites
+*.d
+
+# Object files
 *.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
 *.so
+*.so.*
+*.dylib
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
 
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
 
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+*DS_Store
+.vscode/
+pft_2019/
+
+push_swap_test
+*.excalidraw
+pyviz.py
+push_swap_visualizer
+cmake-build-debug/
+*.txt
+.idea
