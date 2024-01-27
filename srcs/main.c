@@ -29,6 +29,6 @@
 //}
 int main (void)
 {
-//   main for test();
+    printf("mini fonctionne \n");
     return 0;
 }
