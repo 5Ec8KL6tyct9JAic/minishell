@@ -88,6 +88,7 @@ void				child_signals(int signum);
 void				dismiss_signal(int signum);
 
 // Commands
+char 		*get_pwd(void);
 
 // Utils
 

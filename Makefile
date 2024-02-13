@@ -40,12 +40,12 @@ CFLAGS 			= 	-I $(HEADER) -I$(HEADER_LIBFT) -Wall -Wextra -Werror -fsanitize=add
 #CI dessus sont definis les variable utiles a la compilation comme les flags ou certaine commande#
 #/////////////////////////////SRCS////////////////////////////////////////
 SRCS = 	main.c\
-		# cofing_signals.c\
-		# builtins/echo.c\
-		# builtins/cd.c\
-		# builtins/pwd.c\
-		# builtins/export.c\
-		# builtins/unset.c\
+		builtins/pwd.c\
+		#cofing_signals.c\
+		#builtins/echo.c\
+		#builtins/cd.c\
+		#builtins/export.c\
+		#builtins/unset.c\
 		# builtins/env.c\
 		# builtins/exit.c\
 		# exec/cmd_exec.c\
@@ -94,7 +94,7 @@ lib :
 		echo "$(COLOUR_RED)Compiling libft...$(COLOUR_END)"; \
 		make -C $(LIB); \
 		echo "$(COLOUR_RED)Deplacement du libft.a$(COLOUR_END)\n"; \
-		cp ./$(LIB)/libft.a libft.a; \
+		cp ./$(LIB)/libft.a libft.a;\
 	fi
 #CI dessus est une condition qui permet de verifier si la libft est deja compilee ou non#
 $(NAME): $(_OBJS)
@@ -104,7 +104,7 @@ $(NAME): $(_OBJS)
 	@exit 0
 #CI dessus est la regle qui permet de compiler le projet#
 $(OBJS_DIR)/%.o: $(SRC_PATH)/%.c
-		@mkdir -p $(OBJS_DIR)
+		@mkdir -p $(dir $@)
 		@${CC} $(CFLAGS) -c $< -o $@ -g3
 #CI dessus est la regle qui permet de compiler les .o#
 clean:

@@ -2,10 +2,25 @@
 
 
 // // func pour prendre l'input (à faire)
-// static char	*get_input(void)
-// {
-
-// }
+static char	*get_input(int status)
+{
+    char    *input;
+    char     *path;
+    
+    while(status)
+    {
+        path = get_pwd();
+        input = readline(path);
+        if(!input)
+            //EOF, EXIT
+            break;
+        add_history(input);
+        ft_printf("%s\n", input);
+        free(path);
+        free(input);
+    }
+    return(0);
+}
 
 // // fonction à faire (relier toutes les fonction parse pour le checking) en gros elle va tout mettre a null pour pas de leaks
 // static void	parse_checked(t_statement **statement_list, t_data *data)
@@ -29,6 +44,6 @@
 //}
 int main (void)
 {
-    printf("mini fonctionne \n");
+   get_input(1);
     return 0;
 }
