@@ -77,25 +77,31 @@ ifeq ($(shell uname -s), Darwin)
     CFLAGS += -I $(READLINE_PATH)/include -L $(READLINE_PATH)/lib
 endif
 #CI dessus est une condition qui permet de compiler le projet sur macos avec homebrew#
+#/////////////////////CI dessous sont les regles du makefile/////////////////////#
+all: check lib $(NAME)
+	@echo "$(COLOUR_GREEN)minishell compiled.$(COLOUR_END)";
+#CI dessus est la regle par defaut du makefile#
 
 check: 
 	@if [ -f $(NAME) ]; then \
 		echo "$(COLOUR_GREEN)minishell already compiled.$(COLOUR_END)"; \
 		exit 0; \
+	else \
+		echo "$(COLOUR_RED)minishell not compiled.$(COLOUR_END)"; \
+		echo "$(COLOUR_YELLOW)Compiling minishell...$(COLOUR_END)"; \
 	fi
 #CI dessus est une condition qui permet de verifier si le projet est deja compile ou non#
-all: check lib $(NAME)
-	@echo "$(COLOUR_GREEN)minishell compiled.$(COLOUR_END)";
-#CI dessus est la regle par defaut du makefile#
+
 lib : 
 	@if [ -f libft.a ]; then \
-		echo "$(COLOUR_GREEN)libft already compiled.$(COLOUR_END)"; \
+		echo "$(COLOUR_GREEN)libft already compiled.$(COLOUR_END)";\
 	else \
-		echo "$(COLOUR_RED)Compiling libft...$(COLOUR_END)"; \
-		make -C $(LIB); \
-		echo "$(COLOUR_RED)Deplacement du libft.a$(COLOUR_END)\n"; \
+		echo "$(COLOUR_RED)Compiling libft...$(COLOUR_END)";\
+		make -C $(LIB);\
+		echo "$(COLOUR_RED)Deplacement du libft.a$(COLOUR_END)\n";\
 		cp ./$(LIB)/libft.a libft.a;\
 	fi
+
 #CI dessus est une condition qui permet de verifier si la libft est deja compilee ou non#
 $(NAME): $(_OBJS)
 	@echo "$(COLOUR_CYAN)Compiling minishell..."

@@ -27,28 +27,28 @@
 
 // MINISHELL
 
-# define CL_ARGUMENTS_ERR "minishell: no support for command-line arguments"
-# define NO_PIPE_PROMPT "minishell: no support for pipe prompt"
-# define NO_SYTX_PROMPT "minishell: no support for syntax prompt"
-# define PIPE_ERR "minishell: pipe() failed"
-# define FORK_ERR "minishell: fork() failed"
+# define CL_ARGUMENTS_ERR "minishell: no support for command-line arguments.\n"
+# define NO_PIPE_PROMPT "minishell: no support for pipe prompt.\n"
+# define NO_SYTX_PROMPT "minishell: no support for syntax prompt.\n"
+# define PIPE_ERR "minishell: pipe() failed.\n"
+# define FORK_ERR "minishell: fork() failed.\n"
 
 // SYNTAX
 
-# define UNCLOSED_QUOTES "minishell: unclosed quotes"
-# define UNEXPECTED_TOKEN "minishell: syntax error near unexpected token `"
-# define SYTX_ERR_RDR "minishell: syntax error near unexpected token `newline'"
+# define UNCLOSED_QUOTES "minishell: unclosed quotes.\n"
+# define UNEXPECTED_TOKEN "minishell: syntax error near unexpected token.\n"
+# define SYTX_ERR_RDR "minishell: syntax error near unexpected token `newline.\n"
 
 // EXIT CMD
 
-# define EXIT_TOO_MANY_ARGS "minishell: exit: too many arguments"
-# define EXIT_NON_NUMERIC_ARG "minishell: exit: numeric argument required" 
+# define EXIT_TOO_MANY_ARGS "minishell: exit: too many arguments\n"
+# define EXIT_NON_NUMERIC_ARG "minishell: exit: numeric argument required\n" 
 
 // CD CMD
 
 # define PATH_MAX	4096
-# define CD_TOO_MANY_ARGS "minishell: cd: too many arguments"
-# define OLDPWD_NOT_SET "minishell: cd: OLDPWD not set"
+# define CD_TOO_MANY_ARGS "minishell: cd: too many arguments.\n"
+# define OLDPWD_NOT_SET "minishell: cd: OLDPWD not set.\n"
 
 typedef enum e_operator {
 	NONE,
