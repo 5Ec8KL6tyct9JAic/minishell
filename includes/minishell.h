@@ -59,6 +59,12 @@ typedef enum e_operator {
 	PIPE,
 }				t_operator;
 
+typedef struct s_parser {
+	char		*input;
+	char		*token;
+	t_operator	operator;
+}				t_parser;
+
 /* if func == t_statemnent -> p_ we're talking about the parser */
 typedef struct s_statement {
 	int					argc;

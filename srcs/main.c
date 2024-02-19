@@ -6,6 +6,7 @@ static char	*get_input(int status)
 {
     char    *input;
     char     *path;
+    t_parser parser;
     
     while(status)
     {
@@ -15,7 +16,8 @@ static char	*get_input(int status)
             //EOF, EXIT
             break;
         add_history(input);
-        ft_printf("%s\n", input);
+        parser.input = input;
+        ft_printf("%s\n", parser.input);
         free(path);
         free(input);
     }
