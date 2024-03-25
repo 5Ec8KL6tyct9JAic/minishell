@@ -6,7 +6,7 @@
 /*   By: nchebbi <nchebbi@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 19:20:33 by nchebbi           #+#    #+#             */
-/*   Updated: 2024/03/20 15:41:13 by nchebbi          ###   ########.fr       */
+/*   Updated: 2024/03/25 21:41:36 by nchebbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ char	**get_token(char *input)
 	int		j;
 	char	**token;
 
+	token = s_command->argument;	
 	i = 0;
 	j = 0;
 	k = 0;

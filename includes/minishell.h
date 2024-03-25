@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   minishell.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nchebbi <nchebbi@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/25 21:35:41 by nchebbi           #+#    #+#             */
+/*   Updated: 2024/03/25 22:51:42 by nchebbi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
 # include "Libft/includes/libft.h"
+# include "parser.h"
 
 # include <errno.h>
 # include <fcntl.h>
@@ -60,13 +72,20 @@ typedef enum e_operator {
 	RDR_INPUT,
 	RDR_INPUT_UNTIL,
 	PIPE,
-}				t_operator;
+}t_operator;
+//structure pour la liste chainee des commandes.
+struct s_cmd
+{
+	char *cmd;
+	struct s_cmd *next;
+	struct s_cmd *prev;
+}	t_cmd;
 
 typedef struct s_parser {
 	char		*input;
 	char		*token;
 	t_operator	operator;
-}				t_parser;
+}t_parser;
 
 /* if func == t_statemnent -> p_ we're talking about the parser */
 typedef struct s_statement {
@@ -74,16 +93,16 @@ typedef struct s_statement {
 	char				**argv;
 	t_operator			operator;
 	struct s_statement	*next;
-}				t_statement;
+}t_statement;
 
 /* if func == t_vars -> v_  we're talking about variables */
-typedef struct s_variable {
+typedef struct s_vlst {
 	char			*var_name;
 	char			*var_value;
 	bool			is_exported;
 	struct s_vlst	*next;
 	struct s_vlst	*prev;
-}				t_varaiable;
+}t_vlst;
 
 /* data keeps a pointer to the head node in
  case of a need to call panic() (fork or pipe error) */
@@ -92,7 +111,7 @@ typedef struct s_data {
 	char		**envp;
 	t_vlst		*envp_lst;
 	t_statement	*head;
-}				t_data;
+}t_data;
 
 void				child_signals(int signum);
 void				dismiss_signal(int signum);
