@@ -87,3 +87,4 @@ size_t	get_nr_statements(char *input)
 	}
 	return (count);
 }
+

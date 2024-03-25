@@ -4,16 +4,19 @@
 
 # include "Libft/includes/libft.h"
 
-# include <readline/readline.h>
-# include <readline/history.h>
-
-# include <sys/types.h>
-# include <dirent.h>
-# include <signal.h>
-# include <sys/stat.h>
-# include <sys/wait.h>
 # include <errno.h>
-
+# include <fcntl.h>
+# include <limits.h>
+# include <readline/history.h>
+# include <readline/readline.h>
+# include <signal.h>
+# include <stdbool.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <sys/ioctl.h>
+# include <sys/termios.h>
+# include <unistd.h>
 /* CONSTANTS */
 
 # define SUCCESS 0
@@ -74,12 +77,13 @@ typedef struct s_statement {
 }				t_statement;
 
 /* if func == t_vars -> v_  we're talking about variables */
-typedef struct s_vlst {
+typedef struct s_variable {
 	char			*var_name;
 	char			*var_value;
 	bool			is_exported;
 	struct s_vlst	*next;
-}				t_vlst;
+	struct s_vlst	*prev;
+}				t_varaiable;
 
 /* data keeps a pointer to the head node in
  case of a need to call panic() (fork or pipe error) */
@@ -94,14 +98,11 @@ void				child_signals(int signum);
 void				dismiss_signal(int signum);
 
 // Commands
-char 		*get_pwd(void);
+char				*get_pwd(void);
 
 // Utils
 
 bool				is_all_digits_or_signals(char *str);
 
 // Linked lists 
-
-
-
 # endif
