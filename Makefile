@@ -46,19 +46,19 @@ SRCS = 	main.c\
 		#builtins/cd.c\
 		#builtins/export.c\
 		#builtins/unset.c\
-		# builtins/env.c\
-		# builtins/exit.c\
-		# exec/cmd_exec.c\
-		# exec/executables.c\
-		# exec/pipe.c\
-		# exec/redirections.c\
-		# parser/bad_syntax.c\
-		# parser/parser.c\
-		# parser/rm_quotes.c\
-		# parser/utils_parser.c\
-		# utils.c/linked_list/digit_and_signal_checker.c\
-		# utils.c/linked_list/input_valid.c\
-		# utils.c/shell_setup.c\
+		#builtins/env.c\
+		#builtins/exit.c\
+		#exec/cmd_exec.c\
+		#exec/executables.c\
+		#exec/pipe.c\
+		#exec/redirections.c\
+		#parser/bad_syntax.c\
+		#parser/parser.c\
+		#parser/rm_quotes.c\
+		#parser/utils_parser.c\
+		#utils.c/linked_list/digit_and_signal_checker.c\
+		#utils.c/linked_list/input_valid.c\
+		#utils.c/shell_setup.c\
 #CI dessus sont definis tous les fichiers sources du projet #
 #il faut les lister ici en pensant que le chemin des src est deja /srcs/#
 #//////////////////////////OBEJCTS/////////////////////////////////////////#

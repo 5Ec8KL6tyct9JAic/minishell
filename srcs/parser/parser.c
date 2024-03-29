@@ -6,7 +6,7 @@
 /*   By: nchebbi <nchebbi@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/15 19:20:33 by nchebbi           #+#    #+#             */
-/*   Updated: 2024/03/25 21:41:36 by nchebbi          ###   ########.fr       */
+/*   Updated: 2024/03/26 23:47:15 by nchebbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ char	**get_token(char *input)
 	}
 }
 //func pour l'input du parse
-
+//https://www.oilshell.org/blog/2019/02/07.html
+//https://github.com/Swoorup/mysh/blob/master/README.md
 // func parse
